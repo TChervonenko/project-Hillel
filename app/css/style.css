@@ -1640,13 +1640,13 @@
 }
 
 .lawyers {
-  margin-top: 45px;
+  margin-top: 35px;
   margin-bottom: 30px;
 }
 
 .lawyers-item {
   max-width: 315px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .lawyers-item__title {
@@ -1733,6 +1733,7 @@
   }
   .lawyers-item {
     max-width: 648px;
+    padding-bottom: 30px;
   }
   .lawyers-item__title {
     font-size: 38px;
@@ -1859,7 +1860,7 @@
   font-size: 19px;
   line-height: 30px;
   color: #000000;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .quality-content__title {
