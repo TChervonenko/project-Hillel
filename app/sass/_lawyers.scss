@@ -1,0 +1,124 @@
+.lawyers {
+    margin-top: 45px;
+    margin-bottom: 30px;
+}
+.lawyers-item {
+    max-width: 315px;
+    padding-bottom: 30px;
+    &__title {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+        background: $textgradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        padding-bottom: 30px;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 30px;
+        color: $black;
+    }
+}
+.lawyers-unit {
+    max-width: 315px; 
+    border-left: 4px solid $greyseparator;
+}
+.lawyers-point {
+    padding-left: 30px;
+    &__flag {
+        background-image: url('../img/flag.svg');
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        margin-right: 8px;
+    }
+    &__bag {
+        background-image: url('../img/bag.svg');
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        margin-right: 8px;  
+    }
+    &__star {
+        background-image: url('../img/star.svg');
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        margin-right: 8px;  
+    }
+    &__sign {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        text-align: center;
+        background: $textgradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $mainregular;
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
+    &__text.last {
+        padding-bottom: 0; 
+    }
+}
+
+@media (min-width: 768px) {
+.lawyers {
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+.lawyers-item {
+    max-width: 648px;
+    &__title {
+        font-size: 38px;
+        line-height: 46px;
+    }
+}
+.lawyers-unit {
+    max-width: 648px;
+}
+}
+
+@media (min-width: 992px) {
+    .lawyers {
+        margin-bottom: 20px;
+    }
+    .lawyers-box {
+        display: flex;
+    }
+
+    .lawyers-item {
+        max-width: 486px;
+    }
+
+    .lawyers-unit {
+        max-width: 388px;
+        height: 322px;
+        margin-left: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .lawyers {
+        margin-bottom: 20px;
+    }
+    .lawyers-box {
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+    .lawyers-item {
+        max-width: 662px;
+    }
+}

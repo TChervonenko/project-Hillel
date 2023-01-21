@@ -1,0 +1,156 @@
+.slider-box {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.slider {
+    background: $greybg;
+    border-radius: 12px;
+    &__pic {
+        background-image: url('../img/team-m.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 500px;
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+}
+.slider-content {
+    padding: 30px;
+    &__link {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $activeregular;
+        transition-duration: 1000ms;
+        transition-property: color;
+
+        &:hover {
+            color: $accent;
+        }
+        &:hover path {
+            stroke: $accent;
+            transform: translateX(2px);
+        }
+        &:focus {
+            outline: 3px solid $accent;
+        }
+    }
+    &__text {
+        max-width: 245px;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+        background: $textgradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        padding-top: 5px;
+        padding-bottom: 30px;
+    }
+    &__name {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: $greytext;
+        max-width: 170px;
+    }
+    &__position {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $greytext;
+        padding-top: 6x;
+    }
+}
+
+.slider-2,
+.slider-3 {
+    display: none;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+    padding-top: 30px;
+    & li {
+        padding: 0 7px;
+        &.active button {
+            background: $activeregular;
+        }
+        &:focus {
+            outline: 3px solid $accent;
+        }
+    }
+    & button {
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        border: none;
+        background: $activeregularopacity;
+        font-size: 0;
+        border-radius: 50%;
+    }  
+}
+
+
+@media (min-width: 768px) {
+    .slider-box {
+        margin-top: 75px;
+    }
+    .slider__pic {
+        background-image: url('../img/team-t.jpg');
+    }
+    .slider-content__text {
+        font-size: 38px;
+        line-height: 46px;
+        max-width: 550px;
+    }
+    .slider-content__name {
+        max-width: 550px;
+    }
+}
+
+@media (min-width: 992px) {
+    .slider-box {
+        margin-top: 80px;
+    }
+    .slider {
+        display: grid;
+        grid-template-columns: 400px 504px;
+        &__pic {
+            background-image: url('../img/team-tb.jpg');
+            height: 528px;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 12px;
+        }
+    }
+    .slider-content__text {
+        max-width: 400px;
+    }
+    .slider-content__name {
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .slider {
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        &__pic {
+            background-image: url('../img/team.jpg');
+            height: 344px;
+        }
+    }
+    .slider-content__text {
+        max-width: 800px;
+    }
+}

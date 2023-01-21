@@ -1,0 +1,150 @@
+.container--lg {
+    min-width: 375px;
+    padding: 0;
+}
+
+.partners {
+    margin-top: 60px;
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $mainregular;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    &__box {
+        padding-bottom: 30px;
+    }
+    &__item {
+        display: block;
+        width: 375px;
+        height: 120px;
+    &--hillel {
+        background-color: $hillel;
+        background-image: url('../img/hillel.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    &--wannabiz {
+        background-color: $wannabiz;
+        background-image: url('../img/wannabiz.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    &--tapgerine {
+        background-color: $tapgerine;
+        background-image: url('../img/tapgerine.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    &--sdlook {
+        background-color: $sdlook;
+        background-image: url('../img/3dlook.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    &--orangear {
+        background-color: $orangear;
+        background-image: url('../img/orangear.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    &--adtellige {
+        background-color: $adtellige;
+        background-image: url('../img/adtelligent.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    &--clickky,
+    &--ecoleasing,
+    &--infratek,
+    &--sitypark,
+    &--artprints,
+    &--ultimate
+    {
+        display: none;
+    }
+    }
+}
+
+@media (min-width: 768px) {
+    .container--lg {
+        max-width: 768px;
+    }
+    .partners__box {
+        display: grid;
+        grid-template-columns: repeat(3, 256px);
+        grid-template-rows: repeat(4, 120px);
+    }
+
+    .partners__item {
+        display: block;
+        width: 256px;
+        height: 120px;
+    &--clickky {
+            background-color: $clickky;
+            background-image: url('../img/clickky.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        &--ecoleasing {
+            background-color: $ecoleasing;
+            background-image: url('../img/ecoleasing.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        &--infratek {
+            background-color: $infratek;
+            background-image: url('../img/infratek.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        &--sitypark {
+            background-color: $sitypark;
+            background-image: url('../img/sitypark.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        &--artprints {
+            background-color: $artprint;
+            background-image: url('../img/artprint.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        &--ultimate {
+            background-color: $black;
+            background-image: url('../img/ultimatecard.png');
+            background-repeat: no-repeat;
+            background-position: center center;  
+        }
+    }
+    }
+
+    @media (min-width: 992px) {
+        .container--lg {
+            max-width: 1024px;
+        }
+        .partners__box {
+            padding-bottom: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 256px);
+            grid-template-rows: repeat(3, 120px);
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .container--lg {
+            max-width: 1440px;
+        }
+        .partners__box {
+            display: grid;
+            grid-template-columns: repeat(4, 360px);
+        }
+        .partners__item {
+            width: 360px;
+        }
+        
+    }

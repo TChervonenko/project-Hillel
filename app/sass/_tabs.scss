@@ -1,0 +1,135 @@
+.tabs {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.tabs-box {
+    max-width: 1080px;
+    margin: o auto;
+}
+
+.tabs-content {
+    display: none;
+&.active {
+    display: block;
+    }
+}
+
+.tabs-switcher {
+    display: flex;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding-bottom: 30px;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+&::-webkit-scrollbar {
+    display: none;
+}
+& button {
+    white-space: nowrap;
+}
+&__button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    color: $greytext;
+    margin-right: 30px;
+}
+&__button.active {
+    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+   
+}
+&__button:hover {
+    background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+&__button:focus {
+    outline: 3px solid $accent;
+}
+}
+
+.tabs-content {
+    margin-top: 30px;
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: $white;
+        padding-bottom: 30px;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 30px;
+        color: $white;
+    }
+}
+
+@media (min-width: 768px) {
+    .tabs {
+        margin-top: 90px;
+        margin-bottom: 60px;
+    }
+    .tabs-switcher {
+        padding-bottom: 60px;
+       
+        &__button {
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
+    .tabs-content {
+        margin-top: 60px;
+        &__title {
+            font-size: 30px;
+            padding-bottom: 45px;
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+.tabs-box {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+}
+.tabs-switcher {
+    display: flex;
+    flex-direction: column;
+    border-right: 4px solid rgba(255, 255, 255, 0.3);
+    border-bottom: none;
+    padding-right: 60px;
+    margin-right: 60px;
+    padding-bottom: 14px;
+    &__button {
+        align-self: flex-end;
+    &--down {
+        padding-bottom: 30px;
+    }
+    }
+}
+.tabs-content {
+    margin-top: 10px;
+    padding-bottom: 9px;
+    &__title {
+        padding-bottom: 30px;
+    }
+}
+}
+
+@media (min-width: 1200px) {
+    .tabs-content {
+        margin-top: 43px;
+        margin-bottom: 43px;
+    }
+}

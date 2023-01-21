@@ -1,0 +1,55 @@
+.provider {
+    margin-top: 135px;
+   
+    &__title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 46px;
+        color: $white;
+        margin-bottom: 159px;
+    }
+    &__link {
+       display: flex;
+       justify-content: center;
+    &:hover path {
+        stroke: $accent;
+    }
+    &:hover circle {
+        stroke: $accent;
+    }
+    &:focus {
+        outline: 3px solid $accent;
+    }
+    }
+}
+
+@media (min-width: 768px) {
+    .provider {
+        margin-top: 269px;
+        &__title {
+            margin-bottom: 417px;
+        }
+    }
+      
+}
+
+@media (min-width: 992px) {
+    .provider {
+        margin-top: 245px;
+        &__title {
+            margin-bottom: 289px;
+        }
+    }
+      
+}
+
+@media (min-width: 1200px) {
+    .provider {
+        margin-top: 261px;
+        &__title {
+            margin-bottom: 305px;
+        }
+    }
+      
+}

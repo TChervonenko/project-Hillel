@@ -1,0 +1,204 @@
+.bg-publications {
+    background: $greybg;
+}
+.publications {
+    padding-top: 5px;
+&-link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $activeregular;
+    transition-duration: 1000ms;
+    transition-property: color;
+
+    &:hover {
+        color: $accent;
+    }
+    &:hover path {
+        stroke: $accent;
+        transform: translateX(2px);
+    }
+    &:focus {
+        outline: 3px solid $accent;
+    }
+}
+    &-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    background: $textgradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    padding-bottom: 30px;
+}
+    &-box {
+        padding-bottom: 5px;
+    &__item {
+        border-radius: 8px;
+        margin-bottom: 30px;
+        background: $white;
+    }
+
+    &__pic1 {
+        background-image: url('../img/equity-m.jpg');
+        background-repeat: no-repeat;
+        border-radius: 8px 8px 0px 0px;
+        width: 315px;
+        height: 200px;
+        background-size: cover;
+    }
+    &__pic2 {
+        background-image: url('../img/gdpr-m.jpg');
+        background-repeat: no-repeat;
+        border-radius: 8px 8px 0px 0px;
+        width: 315px;
+        height: 200px;
+        background-size: cover;
+    }
+    &__pic3 {
+        background-image: url('../img/millennial-m.jpg');
+        background-repeat: no-repeat;
+        border-radius: 8px 8px 0px 0px;
+        width: 315px;
+        height: 200px;
+        background-size: cover;
+    }
+} 
+}
+
+.publications-box-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    &__link {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-decoration: none;
+        color: $activeregular;
+        &:hover {
+            color: $accent;
+        }
+        &:focus {
+            outline: 3px solid $accent;
+        }
+    }
+    &__period {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $greytext;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 4px solid $greyseparator;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $black;
+        padding-top: 15px;
+        max-width: 255px;
+        margin-bottom: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .publications {
+        padding-top: 5px;
+    }
+    .publications-title {
+        font-size: 38px;
+        line-height: 46px;
+        padding-top: 10px;
+    }
+    
+    .publications-box {
+        display: grid;
+        grid-template-columns: 309px 309px;
+        grid-template-rows: auto auto;
+        column-gap: 30px;
+        padding-bottom: 0;
+        &__item--03 {
+            grid-column: span 2;
+        }
+
+
+        &__pic1 {
+            background-image: url('../img/equity-sd.jpg');
+            width: 309px;
+            height: 200px;
+        }
+        &__pic2 {
+            background-image: url('../img/gdpr-sd.jpg');
+            width: 309px;
+            height: 200px;
+        }
+        &__pic3 {
+            background-image: url('../img/millennial-tablet.jpg');
+            width: 648px;
+            height: 200px;
+        }
+    }
+    .publications-box-content__text {
+        max-width: 588px;
+    }
+}
+
+@media (min-width: 992px) {
+    .publications-box {
+        grid-template-columns: 282px 282px 282px;
+        grid-template-rows: 1fr;
+        &__item--03 {
+            grid-column: 3 /4 ;
+        }
+
+        &__pic1 {
+            background-image: url('../img/equity-hd.jpg');
+            width: 281px;
+            height: 200px;
+        }
+        &__pic2 {
+            background-image: url('../img/gdpr-hd.jpg');
+            width: 281px;
+            height: 200px;
+        }
+        &__pic3 {
+            background-image: url('../img/millennial-hd.jpg');
+            width: 281px;
+            height: 200px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .publications {
+        padding-top: 2px;
+    }
+    .publications-box {
+        grid-template-columns: 420px 420px 420px;
+        grid-template-rows: 1fr;
+        &__pic1 {
+            background-image: url('../img/equity-d.jpg');
+            width: 420px;
+            height: 200px;
+        }
+        &__pic2 {
+            background-image: url('../img/gdpr-d.jpg');
+            width: 420px;
+            height: 200px;
+        }
+        &__pic3 {
+            background-image: url('../img/millennial-d.jpg');
+            width: 420px;
+            height: 200px;
+        }
+    }
+}

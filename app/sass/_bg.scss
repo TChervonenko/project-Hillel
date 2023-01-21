@@ -1,0 +1,47 @@
+.bg {
+    background: url('../img/symbol.svg') no-repeat center top,
+                $bggradient;
+    border-radius: 0px 0px 12px 12px;
+    background-size: 523px 600px, cover;
+    position: relative;
+    &::after {
+        content: '';
+        height: 10px;
+        background-color: $shadowtop;
+        position: absolute;
+        bottom: -10px;
+        left: 20px;
+        right: 20px;
+        border-radius: 0px 0px 12px 12px;
+    }  
+    &::before {
+        content: '';
+        height: 20px;
+        background-color: $shadowbottom;
+        position: absolute;
+        bottom: -20px;
+        left: 40px;
+        right: 40px;
+        border-radius: 0px 0px 12px 12px;
+    }  
+}
+
+@media (min-width: 768px) {
+    .bg {
+        background-size: 893px 1024px, cover;   
+    }
+}
+ 
+@media (min-width: 992px) {
+    .bg {
+        background-size: 670px 768px, cover;   
+    }
+}
+
+@media (min-width: 1200px) {
+    .bg {
+        background-size: 697px 799px, cover;   
+    }
+}
+ 
+ 
