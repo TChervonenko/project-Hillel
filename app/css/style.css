@@ -48,6 +48,11 @@
   overflow: hidden;
 }
 
+.stop-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 .adress,
 .fb {
   display: none;
@@ -87,6 +92,27 @@
           align-items: flex-start;
   margin-left: -15px;
   padding-top: 15px;
+}
+
+.header__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: .header__overlay overlay;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  -webkit-transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+}
+
+.header__overlay.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .lang {
@@ -173,7 +199,7 @@
 }
 
 .menu-btn {
-  width: 18px;
+  width: 20px;
   height: 18px;
   cursor: pointer;
   position: relative;
@@ -246,7 +272,18 @@
   text-align: center;
   overflow: auto;
   /*height: 100vh;*/
-  display: none;
+  display: block;
+  -webkit-transform: translateX(-300%);
+          transform: translateX(-300%);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.menu__list.show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .menu__link {
@@ -375,6 +412,10 @@
     text-align: center;
     overflow: auto;
     height: auto;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-transition: none;
+    transition: none;
   }
   .menu__link {
     font-weight: 700;
